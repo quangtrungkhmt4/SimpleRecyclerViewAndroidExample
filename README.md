@@ -11,11 +11,10 @@ Simple RecyclerView example in android
 
  - Add recyclerView in XML file
 
- 	<code>
- 	<android.support.v7.widget.RecyclerView
-        android:id="@+id/rvDemo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/></code>
+ 	><android.support.v7.widget.RecyclerView
+        >android:id="@+id/rvDemo"
+        >android:layout_width="match_parent"
+        >android:layout_height="match_parent"/>
 
 
  - Create a XML file item.xml
