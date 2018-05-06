@@ -21,6 +21,7 @@ Simple RecyclerView example in android
 
  - Create a XML file item.xml
 
+ 	```
  	<?xml version="1.0" encoding="utf-8"?>
 	<LinearLayout
     	xmlns:android="http://schemas.android.com/apk/res/android"
@@ -34,10 +35,11 @@ Simple RecyclerView example in android
         	android:layout_height="wrap_content"
         	android:textSize="20sp"/>
 	</LinearLayout>
+	```
 
  - Create a class adapter
 
- 	<code>
+ 	```
  	public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
     private List<String> arr;
@@ -94,4 +96,4 @@ Simple RecyclerView example in android
         void onItemClick(View view, int position);
     }
 }
-	</code>
+	```
