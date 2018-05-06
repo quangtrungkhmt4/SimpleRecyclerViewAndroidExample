@@ -3,11 +3,11 @@ Simple RecyclerView example in android
 
  - Add library in build.gradle(Module.app)
 
-	<code>
+	```
 	dependencies {
     		implementation 'com.android.support:recyclerview-v7:27.1.1'
 	}
-	</code>
+	```
 
  - Add recyclerView in XML file
 
@@ -17,7 +17,6 @@ Simple RecyclerView example in android
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     ```
-
 
  - Create a XML file item.xml
 
@@ -99,4 +98,36 @@ Simple RecyclerView example in android
 
 	```
 
+ - In MainActivity
+
+ 	```
+ 	public class MainActivity extends AppCompatActivity implements MyRecyclerViewAdapter.ItemClickListener {
+
+    	MyRecyclerViewAdapter adapter;
+
+    	@Override
+    	protected void onCreate(Bundle savedInstanceState) {
+        	super.onCreate(savedInstanceState);
+        	setContentView(R.layout.activity_main);
+        
+        	ArrayList<String> arrayList = new ArrayList<>();
+        	arrayList.add("One");
+        	arrayList.add("Two");
+        	arrayList.add("Three");
+        	arrayList.add("Four");
+        	arrayList.add("Five");
+        
+        	RecyclerView recyclerView = findViewById(R.id.rvDemo);
+        	recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        	adapter = new MyRecyclerViewAdapter(this, arrayList);
+        	adapter.setClickListener(this);
+        	recyclerView.setAdapter(adapter);
+    	}
+
+    	@Override
+    	public void onItemClick(View view, int position) {
+        	/// Do something
+    	}
+	}
+	```
 
